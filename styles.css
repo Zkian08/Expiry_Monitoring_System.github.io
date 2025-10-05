@@ -1,0 +1,37 @@
+/* styles.css - simple responsive layout */
+:root{
+  --bg:#f6f7fb; --card:#fff; --accent:#2563eb; --muted:#666;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background:var(--bg);color:#111}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:0.6rem 1rem;background:linear-gradient(90deg,#fff, #f3f6ff);box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.brand{font-weight:700}
+.nav-right{display:flex;gap:1rem;align-items:center}
+.nav-right form.inline{display:flex;gap:.5rem;align-items:center}
+input[type="text"], input[type="date"], input[type="number"], input[name="q"], select {padding:.45rem .5rem;border:1px solid #ddd;border-radius:4px}
+button, .btn{background:var(--accent);color:#fff;padding:.45rem .6rem;border-radius:6px;border:0;cursor:pointer;text-decoration:none}
+.btn.muted{background:#888}
+.btn.small{padding:.2rem .4rem;font-size:.85rem}
+.userbox{display:flex;gap:.5rem;align-items:center}
+.container{max-width:1100px;margin:1rem auto;padding:0 1rem}
+.controls{display:flex;gap:.5rem;align-items:center;margin-bottom:.75rem}
+.panel{background:var(--card);padding:1rem;border-radius:8px;box-shadow:0 4px 16px rgba(2,6,23,.03)}
+.table-wrap{overflow:auto}
+table{width:100%;border-collapse:collapse;font-size:.95rem}
+th,td{padding:.6rem .5rem;border-bottom:1px solid #f0f0f0;text-align:left;vertical-align:top}
+tr.expired{background:#ffecec}
+tr.near-expiry{background:#fff8e1}
+.small{font-size:.85rem;padding:.2rem .4rem}
+.small.danger{background:#ef4444;color:#fff;border-radius:4px;padding:.2rem .4rem;text-decoration:none}
+.footer{text-align:center;padding:1rem;color:var(--muted)}
+.auth{display:grid;place-items:center;height:80vh}
+.card{background:var(--card);padding:1rem;width:100%;max-width:420px;border-radius:10px;box-shadow:0 10px 30px rgba(2,6,23,.06)}
+label{display:block;margin-bottom:.5rem}
+label input,label select{width:100%;margin-top:.25rem}
+.alert{background:#fff4e5;padding:.6rem;border-left:4px solid #f59e0b;margin-bottom:.5rem}
+.muted{color:var(--muted);font-size:.9rem}
+@media (max-width:720px){
+  .nav-right{flex-direction:column;align-items:flex-end;gap:.5rem}
+  .controls{flex-direction:column;align-items:stretch}
+  th,td{font-size:.9rem}
+}
